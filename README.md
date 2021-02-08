@@ -64,6 +64,9 @@ We can perfectly tell vagrant to upgrade the kali linux to the latest and greate
 
 ```
 config.vm.provision "shell", inline: <<-SHELL
+     # make the installation non-interactive
+     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+     # run the upgrade process (this takes a while)
      apt-get update
      apt-get install -y python-is-python3
      apt-get dist-upgrade -y
