@@ -94,3 +94,6 @@ It will use our playbook.yaml in the project directory and our host's installati
 
 # Kali Training
 If you need training, the Offensive Security people have a [good start place](https://kali.training/lessons/introduction/).
+
+# Security Training
+If you need security training and want to work with us, contact us at https://theshell.company/
