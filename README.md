@@ -2,8 +2,8 @@
 The reason why we use kali in dedicated environments is so we can't contaminate the environments. We can use kali both for offensive as defensive purposes.
 
 # Setting up your environment
-1. Make sure you have a working [virtualbox](https://www.virtualbox.org/wiki/Downloads)
-2. Make sure you have a working [vagrant](https://www.vagrantup.com/downloads)
+1. Make sure you have a working [virtualbox](https://www.virtualbox.org/wiki/Downloads).
+2. Make sure you have a working [vagrant](https://www.vagrantup.com/downloads).
 3. Make sure you have [ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html) installed on the host system.
 
 # Pulling the vagrant box for kali
