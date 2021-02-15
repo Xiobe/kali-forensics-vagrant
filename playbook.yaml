@@ -221,6 +221,12 @@
       dest: "/home/vagrant/exercise/data_carving/extra/L5_Video.dd.bz2"
       checksum: sha256:7e0855b3cfee72db35c2b7d26adefe6245d0ec8da8ba612fe370763e2f9fed4c
 
+  - name: download the terry work USB exercise
+    get_url:
+      url: "https://digitalcorpora.s3.amazonaws.com/corpora/scenarios/2009-m57-patents/drives-redacted/terry-work-usb-2009-12-11.E01"
+      dest: "/home/vagrant/exercise/data_carving/terry-work-usb-2009-12-11.E01"
+      checksum: sha256:1600fe2bdfb2bec0b006aa9d1c0ce6d3ad0b6666141a333bf830af7800fb9230
+
   - name: provision with foremost
     become: yes
     become_method: sudo
