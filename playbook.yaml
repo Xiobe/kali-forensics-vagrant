@@ -227,6 +227,12 @@
       dest: "/home/vagrant/exercise/data_carving/terry-work-usb-2009-12-11.E01"
       checksum: sha256:1600fe2bdfb2bec0b006aa9d1c0ce6d3ad0b6666141a333bf830af7800fb9230
 
+  - name: download the bulk extractor documentation
+    get_url:
+      url: "https://digitalcorpora.s3.amazonaws.com/downloads/bulk_extractor/BEUsersManual.pdf"
+      dest: "/home/vagrant/documentation/bulk_extractor/BEUsersManual.pdf"
+      checksum: sha256:e9a503fbc5b72169669205638792b8439bdd430836ca355ae97db0cf74710218
+
   - name: provision with foremost
     become: yes
     become_method: sudo
