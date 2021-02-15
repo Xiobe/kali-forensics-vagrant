@@ -16,209 +16,209 @@
 
   - name: Created the exercise directory for data carving exercises and additional data carving exercises
     file:
-      path: "/home/vagrant/execise/data_carving/extra"
+      path: "/home/vagrant/exercise/data_carving/extra"
       state: directory
     
   - name: download the data carving exercise set 1
     get_url:
       url: "http://prdownloads.sourceforge.net/dftt/11-carve-fat.zip"
-      dest: "/home/vagrant/execise/data_carving/set1.zip"
+      dest: "/home/vagrant/exercise/data_carving/set1.zip"
       checksum: sha256:0c5e850a29f5811a4861a8d75404f7c45ab1b4526981414c7f86d223d5a71b67
 
   - name: download the solutions for exercise set 1
     get_url:
       url: "http://dftt.sourceforge.net/test11/index.html"
-      dest: "/home/vagrant/execise/data_carving/solutions_set1.html"
+      dest: "/home/vagrant/exercise/data_carving/solutions_set1.html"
 
   - name: download the data carving exercise set 2
     get_url:
       url: "http://prdownloads.sourceforge.net/dftt/12-carve-ext2.zip"
-      dest: "/home/vagrant/execise/data_carving/set2.zip"
+      dest: "/home/vagrant/exercise/data_carving/set2.zip"
       checksum: sha256:826c24466f2d7f949e2be5cfa6943c9e056faeb60a65fef2356516b06254481e
 
   - name: download the solutions for exercise set 2
     get_url:
       url: "http://dftt.sourceforge.net/test12/index.html"
-      dest: "/home/vagrant/execise/data_carving/solutions_set2.html"
+      dest: "/home/vagrant/exercise/data_carving/solutions_set2.html"
 
   - name: download the NIST L0 non-fragmented graphic files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L0_Graphic.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L0_Graphic.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L0_Graphic.dd.bz2"
       checksum: sha256:939ae4cf939937783786c7e20ffb084401c151f38933c3f7f1b3ceceb0a46a35
 
   - name: download the NIST L1 sequentially fragmented graphics files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L1_Graphic.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L1_Graphic.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L1_Graphic.dd.bz2"
       checksum: sha256:8a36c4a914c00951d5e343e6bb282bf29b85de400cd6a2e1ef7a8f5398ffbb33
 
   - name: download the NIST L2 non-sequentially fragmented graphics files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L2_Graphic.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L2_Graphic.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L2_Graphic.dd.bz2"
       checksum: sha256:50d93350a7539c4881c13710b227fc6091af317dbe602df5d388bf225160cfba
 
   - name: download the NIST L3 graphic files with missing fragments
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L3_Graphic.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L3_Graphic.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L3_Graphic.dd.bz2"
       checksum: sha256:0f969121bf27785b5b7294947b840546a06215bb84c3735ed10c974ac70efcff
 
   - name: download the NIST L4 graphic files nested with graphic files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L4_Graphic.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L4_Graphic.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L4_Graphic.dd.bz2"
       checksum: sha256:8287a0add771cfaa45363b4015b09483e07a3602bbb746b757d8d449ad706b6a
 
   - name: download the NIST L5 braided graphic files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L5_Graphic.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L5_Graphic.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L5_Graphic.dd.bz2"
       checksum: sha256:e72e82e3da8cfd5aa72e1822ec22738622c17cbce9aca9bc1de76d4d2fecdbae
       
   - name: download the NIST L0 non-fragmented document files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L0_Documents.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L0_Documents.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L0_Documents.dd.bz2"
       checksum: sha256:a3bda185c710d326c172ea3b078d64eeb976efe04c244fecd10a15d4886b3500
 
   - name: download the NIST L1 sequentially fragmented document files (shame hash as L0)
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L1_Documents.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L1_Documents.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L1_Documents.dd.bz2"
       checksum: sha256:a3bda185c710d326c172ea3b078d64eeb976efe04c244fecd10a15d4886b3500
 
   - name: download the NIST L2 non-sequentially fragemented documents files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L2_Documents.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L2_Documents.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L2_Documents.dd.bz2"
       checksum: sha256:3ed8b6c8c61c4ab36ccd2ecffd1b829fcc0892c07d57821fa33f984ac9cceb55
 
   - name: download the NIST L3 document files with missing fragments
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L3_Documents.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L3_Documents.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L3_Documents.dd.bz2"
       checksum: sha256:031b082f2ae9c212040e569224399b235ce37a1c746b05a5a4d810529096428e
 
   - name: download the NIST L4 document files nested in document files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L4_Documents.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L4_Documents.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L4_Documents.dd.bz2"
       checksum: sha256:b0757ed0cad5ad8bb267fbd47e97ea1b738ce754a03deee838580c3977611c02
 
   - name: download the NIST L5 braided document files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L5_Documents.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L5_Documents.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L5_Documents.dd.bz2"
       checksum: sha256:0bd14d39627ef117ed9f69644fbdffc5191e175bb96c22fbbde5bd31edf5117d
 
   - name: download the NIST L0 non-fragmented archive files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L0_Archive.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L0_Archive.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L0_Archive.dd.bz2"
       checksum: sha256:0c367b6351026a08988fd56f833c08e0aa911369e09a25cfc4a4ebaea2701f8a
 
   - name: download the NIST L1 sequentially fragmented archive files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L1_Archive.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L1_Archive.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L1_Archive.dd.bz2"
       checksum: sha256:0c367b6351026a08988fd56f833c08e0aa911369e09a25cfc4a4ebaea2701f8a
 
   - name: download the NIST L2 non-sequentially fragmented archive files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L2_Archive.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L2_Archive.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L2_Archive.dd.bz2"
       checksum: sha256:c13503af1178b99287c6873d3031d72c711d530bce717ee38e82cd4dc1178055
 
   - name: download the NIST L3 archive files with missing fragments
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L3_Archive.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L3_Archive.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L3_Archive.dd.bz2"
       checksum: sha256:119b469042d7b71ad1b21dc5a4b6fadd94a111126835c29b7655c7d52018b36a
 
   - name: download the NIST L4 archive files nested in archive files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L4_Archive.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L4_Archive.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L4_Archive.dd.bz2"
       checksum: sha256:850fff11cbb01e697f87427bd5e2a5884a00bbe33d45b035d7e30efd8dfcafef
 
   - name: download the NIST L5 braided archive files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L5_Archive.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L5_Archive.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L5_Archive.dd.bz2"
       checksum: sha256:e3f905e4e6813bbc3157f126097cc11b069033165b7a5fa063d984a8c91a343d
 
   - name: download the NIST L0 non-fragmented audio files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L0_Audio.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L0_Audio.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L0_Audio.dd.bz2"
       checksum: sha256:f7ab89643698ce94f29c5e4601708712bf2597ab9139f85aec4edec4eeece5d2
 
   - name: download the NIST L1 sequentially fragmented audio files (same hash as L0)
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L1_Audio.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L1_Audio.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L1_Audio.dd.bz2"
       checksum: sha256:f7ab89643698ce94f29c5e4601708712bf2597ab9139f85aec4edec4eeece5d2
 
   - name: download the NIST L2 non-sequentially fragmented audio files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L2_Audio.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L2_Audio.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L2_Audio.dd.bz2"
       checksum: sha256:cca1db46d45aaa27443fca764296108bb5d81abb10d0914b2ce877c26e3f9af3
 
   - name: download the NIST L3 audio files with missing fragments
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L3_Audio.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L3_Audio.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L3_Audio.dd.bz2"
       checksum: sha256:ce87ec818b24e2d573f3a8b1c9afc89971cb02613e288a66d3f1f17f99494f16
 
   - name: download the NIST L4 audio files nested in audio files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L4_Audio.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L4_Audio.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L4_Audio.dd.bz2"
       checksum: sha256:b16b54fa1afd13ec12fd392d917f871affc79e37e82f151e22f318ea601fefc1
 
   - name: download the NIST L5 braided audio files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L5_Audio.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L5_Audio.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L5_Audio.dd.bz2"
       checksum: sha256:fb0598da464930396f0047ae5d49ac476e543f9f25bc79bfa0f970dcbe730c52
 
   - name: download the NIST L0 non-fragmented video files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L0_Video.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L0_Video.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L0_Video.dd.bz2"
       checksum: sha256:91f4bc9c1a7fafdc82088a1c08a457bbfb7a9df6aa520d066054ae20b2502b50
 
   - name: download the NIST L1 sequentially fragemented video files (same hash as L0)
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L1_Video.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L1_Video.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L1_Video.dd.bz2"
       checksum: sha256:91f4bc9c1a7fafdc82088a1c08a457bbfb7a9df6aa520d066054ae20b2502b50
 
   - name: download the NIST L2 non-sequentially framented video files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L2_Video.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L2_Video.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L2_Video.dd.bz2"
       checksum: sha256:7342ffad28537da90c7e5c2284176ae891bd255effd32e6e9a9967ba85a81222
 
   - name: download the NIST L3 video with missing fragments
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L3_Video.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L3_Video.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L3_Video.dd.bz2"
       checksum: sha256:37ee5b474d440995f2e4931e18a8a6af43054aa8bbeb19eb2842433c9a36a051
 
   - name: download the NIST L4 video files nested in video files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L4_Video.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L4_Video.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L4_Video.dd.bz2"
       checksum: sha256:2d4876890b293fadf5055231a5e80bfc2583bf8b74273a8f8a2d9ee0e54a09a3
 
   - name: download the NIST L5 braided video files
     get_url:
       url: "https://www.cfreds.nist.gov/FileCarving/Images/L5_Video.dd.bz2"
-      dest: "/home/vagrant/execise/data_carving/extra/L5_Video.dd.bz2"
+      dest: "/home/vagrant/exercise/data_carving/extra/L5_Video.dd.bz2"
       checksum: sha256:7e0855b3cfee72db35c2b7d26adefe6245d0ec8da8ba612fe370763e2f9fed4c
 
   - name: provision with foremost
