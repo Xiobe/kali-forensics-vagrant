@@ -14,7 +14,7 @@
       dest: "/home/vagrant/documentation/ACPO/ACPO_Good_Practice_Guide_for_Digital_Evidence_v5.pdf"
       checksum: sha256:3bfbfef11be8dd338d056204389db46b69d19f3ee1459943b80d416c11cb6128
 
-  - name: Created the exercise directory for data carving exercises and additional data carving exercises
+  - name: Create the exercise directory for data carving exercises and additional data carving exercises
     file:
       path: "/home/vagrant/exercise/data_carving/extra"
       state: directory
