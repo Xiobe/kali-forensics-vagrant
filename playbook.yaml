@@ -14,9 +14,14 @@
       dest: "/home/vagrant/documentation/ACPO/ACPO_Good_Practice_Guide_for_Digital_Evidence_v5.pdf"
       checksum: sha256:3bfbfef11be8dd338d056204389db46b69d19f3ee1459943b80d416c11cb6128
 
-  - name: Create the exercise directory for data carving exercises and additional data carving exercises
+  - name: Created the exercise directory for data carving exercises and additional data carving exercises
     file:
       path: "/home/vagrant/exercise/data_carving/extra"
+      state: directory
+
+  - name: Create the exercise directory for memory forensics exercises
+    file:
+      path: "/home/vagrant/exercise/memory_forensics"
       state: directory
     
   - name: download the data carving exercise set 1
@@ -227,6 +232,11 @@
       dest: "/home/vagrant/exercise/data_carving/terry-work-usb-2009-12-11.E01"
       checksum: sha256:1600fe2bdfb2bec0b006aa9d1c0ce6d3ad0b6666141a333bf830af7800fb9230
 
+  - name: Create the bulk extractor documentation directory
+    file:
+      path: "/home/vagrant/documentation/bulk_extractor"
+      state: directory
+
   - name: download the bulk extractor documentation
     get_url:
       url: "https://digitalcorpora.s3.amazonaws.com/downloads/bulk_extractor/BEUsersManual.pdf"
@@ -260,6 +270,17 @@
     apt:
       name: bulk-extractor
       state: present
+
+  - name: Create the memory forensics exercises directory
+    file:
+      path: "/home/vagrant/exercises/memory_forensics"
+      state: directory
+
+
+  - name: download memory image R2D2 (WinXP SP2 x86)
+    get_url:
+      url: "http://www.mediafire.com/file/yxqodp1p2aca91x/0zapftis.rar"
+      dest: "/home/vagrant/exercises/memory_forensics/0zapftis.rar"
 
   - name: Inform the playbook has finished
     ansible.builtin.debug:
